@@ -146,6 +146,7 @@ def main():
     s_group(name="coil_value", values=data_multiple_coil)
 
 
+
 # ----------------   Read registers ----------------
 
 
@@ -385,24 +386,24 @@ def main():
     s_group(name="or_mask", values=or_mask)
 
 
-    # session.connect(s_get("modbus_function_codes"))
-    # session.connect(s_get("modbus_read_coil"))
-    # session.connect(s_get("modbus_read_input"))
-    # session.connect(s_get("modbus_write_coil"))
-    # session.connect(s_get("modbus_write_multiple_coils"))
-    # session.connect(s_get("modbus_read_holding_registers"))
-    # session.connect(s_get("modbus_read_input_registers"))
-    # session.connect(s_get("modbus_write_holding_registers"))
-    # session.connect(s_get("modbus_write_multiple_holding"))
+    session.connect(s_get("modbus_function_codes"))
+    session.connect(s_get("modbus_read_coil"))
+    session.connect(s_get("modbus_read_input"))
+    session.connect(s_get("modbus_write_coil"))
+    session.connect(s_get("modbus_write_multiple_coils"))
+    session.connect(s_get("modbus_read_holding_registers"))
+    session.connect(s_get("modbus_read_input_registers"))
+    session.connect(s_get("modbus_write_holding_registers"))
+    session.connect(s_get("modbus_write_multiple_holding"))
 
-    # # serial only
-    #session.connect(s_get("Diagnostics"))
-    #session.connect(s_get("Get_Comm_Event_Counter"))
-    #session.connect(s_get("Get_Comm_Event_Log"))
-    #session.connect(s_get("Report_Slave_ID"))
-    #session.connect(s_get("Read_File_Record"))
-    #session.connect(s_get("Write_File_Record"))
-    session.connect(s_get("Mask_Write_Register"))
+    # serial only
+    # session.connect(s_get("Diagnostics"))
+    # session.connect(s_get("Get_Comm_Event_Counter"))
+    # session.connect(s_get("Get_Comm_Event_Log"))
+    # session.connect(s_get("Report_Slave_ID"))
+    # # session.connect(s_get("Read_File_Record"))
+    # # session.connect(s_get("Write_File_Record"))
+    # session.connect(s_get("Mask_Write_Register"))
 
     session.fuzz()
 
